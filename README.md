@@ -1,4 +1,4 @@
-# 🔥 JS Snitch
+# 🔥 JS Snitch for opengrep
 
 [![Coverage badge](https://img.shields.io/badge/Coverage-100%25-brightreen)](https://github.com/vavkamil/js-snitch/actions/workflows/tests.yml)
 [![Tests badge](https://github.com/vavkamil/js-snitch/actions/workflows/tests.yml/badge.svg)](https://github.com/vavkamil/js-snitch/actions/workflows/tests.yml)
@@ -13,11 +13,11 @@
 
 ## Introduction
 
-**JS Snitch** is a command-line tool that scans remote JavaScript files for potential secrets or credentials using [Trufflehog](https://github.com/trufflesecurity/trufflehog) and [Semgrep](https://github.com/semgrep/semgrep). It automates the process of:
+**JS Snitch** is a command-line tool that scans remote JavaScript files for potential secrets or credentials using [Trufflehog](https://github.com/trufflesecurity/trufflehog) and [Semgrep](https://github.com/semgrep/semgrep). This is a fork that uses opengrep instead of semgrep. It automates the process of:
 
 - Extracting `.js` files from a target domain.
 - Downloading and beautifying the scripts.
-- Running Trufflehog and Semgrep for possible secret leaks.
+- Running Trufflehog and Opengrep for possible secret leaks.
 
 JS Snitch is intended to help penetration testers, bug bounty hunters, and security engineers quickly identify leaked API keys, tokens, or other credentials hidden in external JavaScript files.
 
