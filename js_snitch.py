@@ -388,10 +388,10 @@ def scan_host(hostname, minimal_output=False):
     # SEMGREP
     semgrep_output_json = os.path.join(output_folder, "semgrep_output.json")
     if not minimal_output:
-        print(f"\n[i] Running Semgrep ...")
+        print(f"\n[i] Running Opengrep ...")
 
     # We'll build the base command, adding each rule via --config
-    semgrep_cmd = ["semgrep", "scan", "--no-rewrite-rule-ids"]
+    semgrep_cmd = ["opengrep", "scan"]
     for rule in SEMGREP_RULES:
         semgrep_cmd.extend(["--config", rule])
     semgrep_cmd.extend(
@@ -411,7 +411,7 @@ def scan_host(hostname, minimal_output=False):
 
     if not minimal_output:
         if semgrep_findings:
-            print(f"\t[!] Found {len(semgrep_findings)} findings from Semgrep.")
+            print(f"\t[!] Found {len(semgrep_findings)} findings from Opengrep.")
             rule_ids = set()
             for finding in semgrep_findings:
                 full_id = finding["check_id"]
@@ -420,7 +420,7 @@ def scan_host(hostname, minimal_output=False):
             unverified_detector_names_semgrep = rule_ids
             print(f"\t[!] Unverified: {', '.join(sorted(rule_ids))}")
         else:
-            print(f"\t[!] No Semgrep findings found.")
+            print(f"\t[!] No Opengrep findings found.")
     else:
         if semgrep_findings:
             for finding in semgrep_findings:
@@ -472,13 +472,13 @@ def main():
     # If --debug, print versions and exit
     if args.debug:
         check_dependency("trufflehog", "TruffleHog", verbose=True)
-        check_dependency("semgrep", "Semgrep", verbose=True)
+        check_dependency("opengrep", "opengrep", verbose=True)
         print("[i] Dependencies OK. Exiting now.")
         sys.exit(0)
     else:
         # Always ensure dependencies are installed (silently)
         check_dependency("trufflehog", "TruffleHog", verbose=False)
-        check_dependency("semgrep", "Semgrep", verbose=False)
+        check_dependency("opengrep", "opengrep", verbose=False)
 
     # Must specify either --host or --list
     if not args.host and not args.list:
