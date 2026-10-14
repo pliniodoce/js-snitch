@@ -13,7 +13,7 @@
 
 ## Introduction
 
-**JS Snitch** is a command-line tool that scans remote JavaScript files for potential secrets or credentials using [Trufflehog](https://github.com/trufflesecurity/trufflehog) and [Semgrep](https://github.com/semgrep/semgrep). This is a fork that uses opengrep instead of semgrep. It automates the process of:
+**JS Snitch** is a command-line tool that scans remote JavaScript files for potential secrets or credentials using [Trufflehog](https://github.com/trufflesecurity/trufflehog) and [Semgrep](https://github.com/semgrep/semgrep). This is a fork that uses [Opengrep](https://github.com/opengrep/opengrep) instead. It automates the process of:
 
 - Extracting `.js` files from a target domain.
 - Downloading and beautifying the scripts.
@@ -27,12 +27,12 @@ JS Snitch is intended to help penetration testers, bug bounty hunters, and secur
   - Provide a single host or a list of hosts to scan.
 - **Trufflehog integration**:
   - Leverages Trufflehog's scanning capabilities for secret detection.
-- **Semgrep integration**:
+- **Opengrep integration**:
   - Configurable Semgrep rulesets for additional scanning and pattern-based detection.
 - **Beautification step**:
   - Automatically prettifies downloaded JS files for better readability in local analysis.
 - **Aggregated results**:
-  - Consolidates Trufflehog and Semgrep findings into a single report.
+  - Consolidates Trufflehog and Opengrep findings into a single report.
 - **Unverified vs. Verified secrets**:
   - Quickly see which secrets are valid (verified) and which need manual inspection.
 
@@ -40,7 +40,7 @@ JS Snitch is intended to help penetration testers, bug bounty hunters, and secur
 
 ## Description
 
-Scans remote JavaScript files with Trufflehog + Semgrep to detect leaked secrets
+Scans remote JavaScript files with Trufflehog + Opengrep to detect leaked secrets
 
 ## Installation
 
@@ -54,7 +54,7 @@ $ python js_snitch.py
 ### Required
 
 - [github.com/trufflesecurity/trufflehog](https://github.com/trufflesecurity/trufflehog?tab=readme-ov-file#floppy_disk-installation)
-- [github.com/semgrep/semgrep](https://github.com/semgrep/semgrep?tab=readme-ov-file#option-2-getting-started-from-the-cli)
+- [github.com/opengrep/opengrep](https://github.com/opengrep/opengrep)
 
 ## Usage
 
