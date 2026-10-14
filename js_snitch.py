@@ -455,7 +455,7 @@ def main():
     banner()
 
     parser = argparse.ArgumentParser(
-        description="Scans remote JavaScript files with Trufflehog + Semgrep to detect leaked secrets"
+        description="Scans remote JavaScript files with Trufflehog + Opengrep to detect leaked secrets"
     )
     parser.add_argument("--host", help="Single hostname to scan, e.g. example.com")
     parser.add_argument(
