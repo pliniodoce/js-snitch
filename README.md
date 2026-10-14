@@ -68,7 +68,7 @@ $ python js_snitch.py
 
 usage: js_snitch.py [-h] [--host HOST] [--list LIST] [--debug]
 
-Scans remote JavaScript files with Trufflehog + Semgrep to detect leaked secrets
+Scans remote JavaScript files with Trufflehog + Opengrep to detect leaked secrets
 
 options:
   -h, --help   show this help message and exit
@@ -103,8 +103,8 @@ $ python js_snitch.py --host foo.example.com
 		[!] Intercom - dG9rOjAwMDAwMDBfZGNkZl9SRURBQ1RFRF9kYjc1NmYwMDAwMDAwOjE6MA==
 	[!] Unverified: HubSpotApiKey, Mailchimp, PosthogApp, Slack, SlackWebhook
 
-[i] Running Semgrep ...
-	[!] Found 33 findings from Semgrep.
+[i] Running Opengrep ...
+	[!] Found 33 findings from Opengrep.
 	[!] Unverified: detected-mailchimp-api-key, detected-slack-webhook, hashicorp-tf-password, slack-bot-token, slack-webhook-url
 
 [i] Done; findings saved to output/foo.example.com_2025-01-20_17_53_27/secrets.txt
