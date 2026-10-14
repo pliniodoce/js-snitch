@@ -77,7 +77,6 @@ options:
   --debug      Check dependencies (TruffleHog & Semgrep) versions, then exit.
 ```
 
-![Example](./images/screenshot.png)
 
 ## Examples
 
