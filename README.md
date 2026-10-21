@@ -36,7 +36,7 @@ JS Snitch is intended to help penetration testers, bug bounty hunters, and secur
 - **Unverified vs. Verified secrets**:
   - Quickly see which secrets are valid (verified) and which need manual inspection.
 
-![JS Snitch Cover](./images/cover.png)
+
 
 ## Description
 
